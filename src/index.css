@@ -1,0 +1,26 @@
+.sun-humidity {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: no-repeat url(https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+}
+
+.rain-humidity {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: no-repeat url(https://images.unsplash.com/photo-1517370784207-d61012661d8a?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+}
+
+.snow-humidity {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: no-repeat url(https://images.unsplash.com/photo-1516832347146-1152b91fb42e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+}
