@@ -86,7 +86,7 @@ Explore the unique features available in this application:
 
 ## 🔗 Demo & Screenshots
 
-- [Demo](https://aura-bay.vercel.app/)
+- [Demo](https://auraweatherapp.netlify.app/)
 
 ---
 
