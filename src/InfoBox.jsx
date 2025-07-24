@@ -21,11 +21,13 @@ export default function InfoBox({ info }) {
 
     useEffect(() => {
         const bodyClass = getBodyClass(info.humidity);
-        document.body.className = bodyClass;
+        document.body.classList.add(bodyClass);
+    
         return () => {
-            document.body.className = "sun-humidity";
+            document.body.classList.remove(bodyClass);
         };
     }, [info.humidity]);
+    
 
     return (
         <div className="InfoBox">

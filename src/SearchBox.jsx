@@ -31,7 +31,7 @@ export default function SearchBox({ updateInfo }) {
                     async (position) => {
                         setLatitude(position.coords.latitude);
                         setLongitude(position.coords.longitude);
-                        updateTheInfo();
+                        updateTheInfo(position.coords.latitude, position.coords.longitude);
                     },
                     (error) => {
                         console.error("Error getting user location:", error);
@@ -42,9 +42,9 @@ export default function SearchBox({ updateInfo }) {
             }
         };
         getUserLocation();
-    }, [latitude, longitude]);
+    }, []);
 
-    let updateTheInfo = async () => {
+    let updateTheInfo = async (latitude, longitude) => {
         // Check if latitude and longitude have valid values
         if (latitude === null || longitude === null || latitude === undefined || longitude === undefined) {
             console.error("Latitude or longitude is not defined.");
