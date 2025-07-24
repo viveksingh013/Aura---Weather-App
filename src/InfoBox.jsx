@@ -16,18 +16,20 @@ import { useEffect } from "react";
 
 export default function InfoBox({ info }) {
     const getBodyClass = () => {
-        return info.humidity > 80 ? "rain-humidity" : info.temp > 15 ? "sun-humidity" : "snow-humidity";
+    if (!info || info.humidity == null || info.temp == null) return "sun-humidity";
+    return info.humidity > 80 ? "rain-humidity" : info.temp > 15 ? "sun-humidity" : "snow-humidity";
     };
 
     useEffect(() => {
-        const bodyClass = getBodyClass(info.humidity);
-        document.body.classList.add(bodyClass);
-    
+        if (!info) return;
+        
+        const bodyClass = getBodyClass();
+        document.body.className = bodyClass; // ✅ reset to only this class
+        
         return () => {
-            document.body.classList.remove(bodyClass);
+            document.body.className = ""; // or set default like "sun-humidity"
         };
-    }, [info.humidity]);
-    
+    }, [info.humidity, info.temp]);
 
     return (
         <div className="InfoBox">
